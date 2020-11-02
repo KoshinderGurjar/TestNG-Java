@@ -1,43 +1,38 @@
-# Java TestNG Selenium 
+# Welcome to Lambdatest - Java TestNG Selenium 
 
-### Environment Setup
+## Step 1: Configure your settings and required capabilites for your test
 
-1. Global Dependencies
-    * Install [Maven](https://maven.apache.org/install.html)
-    * Or Install Maven with [Homebrew](http://brew.sh/) (Easier)
-    ```
-    $ install maven
-    ```
-2. Project Dependencies
-    * checkout the repository
-    * Check that packages are available
-    ```
-    $ cd Java-TestNG-Selenium
-    ```
-    * You may also want to run the command below to check for outdated dependencies. Please be sure to verify and review updates before editing your pom.xml file as they may not be compatible with your code.
-    ```
-    $ mvn versions:display-dependency-updates
-    ```
-    
-### Running Tests
+For running a test we will need your `username` and `access key` to map with our cloud infrastrure. 
 
+You can find the required credentials here : <https://www.lambdatest.com/capabilities-generator>
+
+### Change the properties 
+
+Add your Lambdatest `username` and `access key` in testcase.java
 ```
-To run single test
-    $ mvn test -P single
-
-To run local test
-    $ mvn test -P local
-
-To run parallel test
-    $ mvn test -P parallel
-
-To run single test fron Jenkins
-    $ mvn test -P singleJenkins
-
-To run parallel test from Jenkins
-    $ mvn test -P parallelJenkins
+String username = <YOUR LT_USERNAME> #Replace with your username
+String accessKey = <YOUR LT_ACCESS_KEY> #Replace with your access key
 ```
-## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/) is a cloud based selenium grid infrastructure that can help you run automated cross browser compatibility tests on 2000+ different browser and operating system environments. LambdaTest supports all programming languages and frameworks that are supported with Selenium, and have easy integrations with all popular CI/CD platforms. It's a perfect solution to bring your [selenium automation testing](https://www.lambdatest.com/selenium-automation) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
+## Step 2: Running Tests
 
+We have preinstalled all the required environment for running the tests. You can now execute the tests in the console by the following commands: 
+
+#### To run single test
+```
+$ mvn test -P single
+```
+
+#### To run parallel test
+```
+$ mvn test -P parallel
+```
+
+
+## Step 3: Test Results
+
+Once you have completed running the tests you can find the results at : <https://automation.lambdatest.com> with the build name `TestNG` as a prefix. 
+
+For any other quires please connect with us at <support.lambdatest.com>
+
+### Happy testing! :computer:

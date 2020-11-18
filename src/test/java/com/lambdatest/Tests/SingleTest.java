@@ -16,8 +16,8 @@ import org.testng.annotations.Parameters;
 public class SingleTest {
 	
 	//Lambdatest Credentails can be found here at https://www.lambdatest.com/capabilities-generator
-	String username = "<YOUR LT_USERNAME>";
-	String accessKey = "<YOUR LT_ACCESS_KEY>";
+	String username = System.getenv("LT_USERNAME") == null ? "YOUR LT_USERNAME" : System.getenv("LT_USERNAME"); 
+	String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); 
 	
 	
 	public static WebDriver driver;
